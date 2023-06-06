@@ -8,6 +8,7 @@ export default defineConfig({
       sass: {
         additionalData: `
           @import "$lib/sass/_variables"
+          @import "bulma/sass/utilities/_all"
           @import "$lib/sass/_mixins"
         `,
       }
