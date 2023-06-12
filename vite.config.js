@@ -7,8 +7,8 @@ export default defineConfig({
     preprocessorOptions: {
       sass: {
         additionalData: `
-          @import "$lib/sass/_variables"
-          @import "$lib/sass/_mixins"
+          @import "$lib/sass/utilities/variables"
+          @import "$lib/sass/utilities/mixins"
         `,
       }
     },
