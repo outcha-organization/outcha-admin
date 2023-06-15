@@ -28,12 +28,53 @@
           </span>
         </button>
 
-        <a class="button is-primary">
-          <span class="icon is-size-5 mr-0">
-            <Icon icon="material-symbols:download" />
-          </span>
-          <strong>Download</strong>
-        </a>
+        <div class="dropdown is-right is-hoverable">
+          <div class="dropdown-trigger">
+            <button class="button is-white has-text-grey-dark px-2">
+              <span class="image mr-2">
+                <img src="https://cyrilsuzat.com/images/Cyril_Suzat.jpg" alt="Avatar" class="is-rounded">
+              </span>
+              <span class="is-hidden-mobile">
+                john@examp...
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item is-flex is-align-items-center">
+                <span class="icon is-medium is-size-4 mr-1">
+                  <Icon icon="mdi:account-box-outline" />
+                </span>
+                Manage account
+              </a>
+              <a href="#" class="dropdown-item is-flex is-align-items-center">
+                <span class="icon is-medium is-size-4 mr-1">
+                  <Icon icon="mdi:cog" />
+                </span>
+                Preferences
+              </a>
+              <a href="#" class="dropdown-item is-flex is-align-items-center">
+                <span class="icon is-medium is-size-4 mr-1">
+                  <Icon icon="mdi:weather-night" />
+                </span>
+                Dark mode
+              </a>
+              <a href="#" class="dropdown-item is-flex is-align-items-center">
+                <span class="icon is-medium is-size-4 mr-1">
+                  <Icon icon="mdi:weather-sunny" />
+                </span>
+                Light mode
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item is-flex is-align-items-center">
+                <span class="icon is-medium is-size-4 mr-1">
+                  <Icon icon="mdi:sign-out" />
+                </span>
+                Sign out
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -55,7 +96,7 @@
   </div>
 
   <div id="sidebar-footer">
-    <span class="icon mr-2" style="font-size: 3rem">
+    <span class="icon mr-2 is-size-1">
       <Icon icon="ion:switch" />
     </span>
     Dark mode
