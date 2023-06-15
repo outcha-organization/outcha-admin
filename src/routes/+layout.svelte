@@ -6,30 +6,38 @@
   let sidebarVisible = false;
 </script>
 
-<div id="header">
-  <div class="is-flex is-align-items-center">
-    <button on:click={() => sidebarVisible = true} class="hamburger">
-      <Icon icon="fa-solid:bars" />
+<nav class="navbar has-shadow is-fixed-top is-flex is-justify-content-space-between px-1">
+  <div class="navbar-brand">
+    <button class="navbar-burger ml-0" on:click={() => sidebarVisible = true}>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
     </button>
 
-    <a class="logo" href="https://bulma.io">
+    <a class="navbar-item" href="https://bulma.io">
       <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
     </a>
   </div>
 
-  <div>
-    <button class="icon">
-      <Icon icon="fa6-solid:bell" />
-    </button>
+  <div class="navbar-end">
+    <div class="navbar-item">
+      <div class="buttons">
+        <button class="button is-white has-text-grey-dark">
+          <span class="icon is-size-5">
+            <Icon icon="fa6-solid:bell" />
+          </span>
+        </button>
 
-    <a class="button">
-      <span class="icon">
-        <Icon icon="material-symbols:download" />
-      </span>
-      Download
-    </a>
+        <a class="button is-primary">
+          <span class="icon is-size-5 mr-0">
+            <Icon icon="material-symbols:download" />
+          </span>
+          <strong>Download</strong>
+        </a>
+      </div>
+    </div>
   </div>
-</div>
+</nav>
 
 <div id="sidebar" class:visible={sidebarVisible}>
   <div id="sidebar-header">
@@ -69,56 +77,9 @@
 </div>
 
 <style lang="sass">
-  $header-height: 56px
   $sidebar-width: 30%
   $sidebar-max-width: 360px
   $sidebar-footer-height: 42px
-
-  :global(body)
-    padding-top: $header-height
-
-  #header
-    background-color: #fff
-    box-shadow: 0 1px 1px rgba(31, 33, 36, 0.1)
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    height: $header-height
-    padding: 0 16px
-    display: flex
-    justify-content: space-between
-    align-items: center
-    z-index: 2
-
-    h1
-      font-size: 20px
-      font-weight: 400
-      line-height: 36px
-      color: #18181a
-
-    button
-      border-radius: 3px
-      border: none
-      cursor: pointer
-      background-color: transparent
-      display: inline-flex
-      justify-content: center
-      align-items: center
-      margin-right: 8px
-      width: 36px
-      height: 36px
-
-      &:hover
-        background-color: #f1f2f4
-
-      &.hamburger
-        +desktop
-          display: none
-
-      &.icon
-        color: #616a75
-        font-size: 18px
 
   #sidebar
     position: fixed
@@ -132,7 +93,7 @@
     min-width: 240px
     max-width: $sidebar-max-width
     border-right: 1px solid rgb(194, 205, 214)
-    z-index: 3
+    z-index: 31
     transform: translateX(-100%)
     transition: transform 0.3s ease-in-out
 
@@ -140,19 +101,18 @@
       z-index: 1
       transform: translateX(0)
       transition: none
-      top: $header-height
+      top: $navbar-height
       width: $sidebar-width
-      height: calc(100vh - $header-height)
+      height: calc(100vh - $navbar-height)
 
     &.visible
       transform: translateX(0)
-      transition: transform 0.3s ease-in-out
 
   #sidebar-header
     display: flex
     align-items: center
     justify-content: space-between
-    height: $header-height
+    height: $navbar-height
     padding: 0 16px
     background-color: #fff
     box-shadow: 0 1px 1px rgba(31, 33, 36, 0.1)
@@ -209,7 +169,7 @@
     position: fixed
     top: 0
     left: 0
-    z-index: 2
+    z-index: 30
     width: 100vw
     height: 100vh
     background-color: #000
@@ -220,7 +180,7 @@
 
   #content
     padding: 16px
-    min-height: calc(100vh - $header-height)
+    min-height: calc(100vh - $navbar-height)
 
     +desktop
       padding-left: calc(min($sidebar-width, $sidebar-max-width) + 16px)
