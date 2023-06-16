@@ -31,15 +31,15 @@
         <div class="dropdown is-right is-hoverable">
           <div class="dropdown-trigger">
             <button class="button is-white has-text-grey-dark px-2">
-              <span class="image mr-2">
+              <span class="image">
                 <img src="https://cyrilsuzat.com/images/Cyril_Suzat.jpg" alt="Avatar" class="is-rounded">
               </span>
-              <span class="is-hidden-mobile">
+              <span class="ml-2 is-hidden-mobile">
                 john@examp...
               </span>
             </button>
           </div>
-          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+          <div class="dropdown-menu">
             <div class="dropdown-content">
               <a href="#" class="dropdown-item is-flex is-align-items-center">
                 <span class="icon is-medium is-size-4 mr-1">
