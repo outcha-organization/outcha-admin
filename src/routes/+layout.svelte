@@ -170,6 +170,7 @@
   #sidebar-body
     padding: 16px
     flex-grow: 1
+    overflow-y: scroll
 
     &:after
       content: ""
@@ -187,7 +188,7 @@
     align-items: center
     border-top: solid 1px rgb(229, 238, 245)
     padding: 0 16px
-    height: $sidebar-footer-height
+    flex: 0 0 $sidebar-footer-height
     color: rgb(69, 69, 69)
 
   .backdrop
