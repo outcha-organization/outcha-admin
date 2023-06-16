@@ -86,9 +86,7 @@
       <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
     </a>
 
-    <button on:click={() => sidebarVisible = false} class="close">
-      <Icon icon="fa-solid:times" />
-    </button>
+    <button on:click={() => sidebarVisible = false} class="close is-large"></button>
   </div>
 
   <div id="sidebar-body">
@@ -167,21 +165,7 @@
       font-weight: 500
 
     button.close
-      font-size: 18px
-      color: #5c5f62
-      border-radius: 50%
-      border: none
-      background-color: transparent
-      cursor: pointer
-      display: inline-flex
-      justify-content: center
-      align-items: center
-      margin-left: 8px
-      width: 36px
-      height: 36px
-
-      &:hover
-        background-color: #eee
+      +delete
 
   #sidebar-body
     padding: 16px
