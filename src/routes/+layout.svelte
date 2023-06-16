@@ -31,7 +31,7 @@
         <div class="dropdown is-right is-hoverable">
           <div class="dropdown-trigger">
             <button class="button is-white has-text-grey-dark px-2">
-              <span class="image">
+              <span class="image is-32x32">
                 <img src="https://cyrilsuzat.com/images/Cyril_Suzat.jpg" alt="Avatar" class="is-rounded">
               </span>
               <span class="ml-2 is-hidden-mobile">
@@ -82,8 +82,8 @@
 
 <div id="sidebar" class:visible={sidebarVisible}>
   <div id="sidebar-header">
-    <a class="logo" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    <a href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" class="is-block">
     </a>
 
     <button on:click={() => sidebarVisible = false} class="close is-large"></button>
