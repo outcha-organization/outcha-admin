@@ -2,6 +2,7 @@
   import "$lib/sass/global.sass";
   import { fade } from 'svelte/transition';
   import Icon from '@iconify/svelte';
+  import avatar from '$lib/images/avatar.webp';
 
   let sidebarVisible = false;
 </script>
@@ -15,7 +16,7 @@
     </button>
 
     <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      <img src="https://bulma.io/assets/brand/Bulma%20Logo.png" height="28" alt="Bulma logo">
     </a>
   </div>
 
@@ -32,7 +33,7 @@
           <div class="dropdown-trigger">
             <button class="button is-white has-text-grey-dark px-2">
               <span class="image is-32x32">
-                <img src="https://cyrilsuzat.com/images/Cyril_Suzat.jpg" alt="Avatar" class="is-rounded">
+                <img src="{avatar}" alt="Avatar" class="is-rounded">
               </span>
               <span class="ml-2 is-hidden-mobile">
                 john@examp...
